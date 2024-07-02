@@ -42,8 +42,8 @@ st.markdown('Get the visits from a specified date range for all brands included 
 
 st.header('Visits')
 
-from_date = st.date_input(label = 'Insert starting date').strftime("%Y-%m-%d")
-to_date = st.date_input(label = 'Insert ending date').strftime("%Y-%m-%d")
+from_date = st.date_input(label = '**Starting** date').strftime("%Y-%m-%d")
+to_date = st.date_input(label = '**Ending** date').strftime("%Y-%m-%d")
 
 if st.button('Get visits'):
     from_date_dt = datetime.strptime(from_date, '%Y-%m-%d')
