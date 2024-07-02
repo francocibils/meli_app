@@ -10,7 +10,7 @@ from google.cloud import storage
 from google.oauth2 import service_account
 
 # Import MeLi JSON from Cloud Storage
-credentials = service_account.Credentials.from_service_account_info(json.loads(os.getenv['SERVICE_ACCOUNT_CREDENTIALS']))
+credentials = service_account.Credentials.from_service_account_info(json.loads(os.getenv('SERVICE_ACCOUNT_CREDENTIALS')))
 
 client = storage.Client(credentials = credentials)
 bucket_name = 'meli_auth_file'
