@@ -1,7 +1,8 @@
-import streamlit as st
+import os
 import requests
 import json
 import pandas as pd
+import streamlit as st
 
 from datetime import datetime, timedelta
 from collections import defaultdict
@@ -9,10 +10,7 @@ from google.cloud import storage
 from google.oauth2 import service_account
 
 # Import MeLi JSON from Cloud Storage
-SERVICE_ACCOUNT_FILE = 'C:/Users/HP/OneDrive/Inova/06 - SA Keys/compute_developer_key.json'
-
-credentials = service_account.Credentials.from_service_account_file(
-        SERVICE_ACCOUNT_FILE)
+credentials = service_account.Credentials.from_service_account_file(os.environ['SERVICE_ACCOUNT_CREDENTIALS'])
 
 client = storage.Client(credentials = credentials)
 bucket_name = 'meli_auth_file'
