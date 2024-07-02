@@ -27,7 +27,8 @@ meli_access = json.loads(blob.download_as_string())
 access_token = meli_access['access_token']
 
 # Import catalog file
-catalog = pd.read_excel(r'C:\Users\HP\OneDrive\Inova\05 - Ad Hoc Analysis\MX - MeLi app\Catalogo Meli.xlsx', sheet_name = 'Catalog')
+path = 'https://raw.githubusercontent.com/francocibils/supermetrics_update/main/amazon_sku_listado.xlsx'
+catalog = pd.read_excel(path, engine = 'openpyxl')
 
 catalog['MLM'] = catalog['MLM'].str.rstrip()
 catalog['MLM2'] = catalog['MLM2'].str.rstrip()
