@@ -4,5 +4,5 @@ xlrd
 openpyxl
 requests
 datetime
-google-cloud
+google-cloud-storage
 google-auth
