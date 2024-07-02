@@ -1,0 +1,8 @@
+pandas
+streamlit
+xlrd
+openpyxl
+requests
+datetime
+google.cloud
+google.oauth2
